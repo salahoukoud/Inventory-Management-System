@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PurchaseInvoice" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e6b0b823-cd30-4ae8-8d24-de69ca5af1f8">
+	<property name="ireport.zoom" value="1.1000000000000003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="BillNumber" class="java.lang.String"/>
+	<parameter name="TotalAmount" class="java.lang.String"/>
+	<parameter name="Discount" class="java.lang.String"/>
+	<parameter name="SubTotal" class="java.lang.String"/>
+	<field name="ID" class="java.lang.String"/>
+	<field name="Item Code" class="java.lang.String"/>
+	<field name="Seller Code" class="java.lang.String"/>
+	<field name="Description" class="java.lang.String"/>
+	<field name="Brand" class="java.lang.String"/>
+	<field name="Supply Price" class="java.lang.String"/>
+	<field name="Quantity" class="java.lang.String"/>
+	<field name="Total Amount" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="149" splitType="Stretch">
+			<staticText>
+				<reportElement x="25" y="86" width="76" height="18" uuid="9d83f4ee-e784-41ed-ac71-8aba23ace535"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Akuressa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="104" width="118" height="18" uuid="be8a96d1-72eb-495d-b9f1-5950e5767f6e"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[TP :- 041 2247932]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="10" width="251" height="40" uuid="9319064a-175c-42a9-9529-470e7da463a5"/>
+				<textElement>
+					<font fontName="Segoe UI" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fashion Arcade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="68" width="76" height="18" uuid="884e4b44-1399-45a6-a154-2132ca2a849d"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Main Street]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="50" width="58" height="18" uuid="6b59bf41-75df-4448-9481-7247d9143372"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No :- 56 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="565" y="114" width="94" height="29" uuid="7a741d52-736f-4cc8-8a50-d7c089b6cb74"/>
+				<textElement>
+					<font fontName="Segoe UI" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill Number]]></text>
+			</staticText>
+			<line>
+				<reportElement x="665" y="132" width="125" height="1" uuid="9becf9da-6b5f-42f2-bfcb-413f9794d603"/>
+			</line>
+			<textField>
+				<reportElement x="677" y="112" width="100" height="24" uuid="5f488be7-c3bb-4449-8af1-12071c3be917"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BillNumber}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="665" y="68" width="113" height="20" uuid="bb8650ea-2029-4512-8c01-bb449b73cf3d"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="601" y="68" width="58" height="29" uuid="dd5b6b08-df9f-44d6-b299-e5aaeab145c2"/>
+				<textElement>
+					<font fontName="Segoe UI" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="83" splitType="Stretch">
+			<staticText>
+				<reportElement x="351" y="23" width="109" height="40" uuid="811f7bdc-b3be-4266-aef6-13e747c2d894"/>
+				<textElement>
+					<font fontName="Segoe UI" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Invoice]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="dcd5b29e-31e6-4421-ad24-2792538b8c97"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20" uuid="67a0e112-32a5-4648-99aa-7eb046ef0076"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Item Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20" uuid="4e8d8be6-69c5-4d9b-a0d2-6ab26991214a"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Seller Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="0eca9437-ab92-43be-b8fc-b7ca51f48a0c"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="078bab11-884a-4fc1-b48a-55019fdcec09"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="500" y="0" width="100" height="20" uuid="2e8e6162-5b13-4a9e-86a9-f15dd66e96d0"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Supply Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="0" width="100" height="20" uuid="a519a1f8-03a6-4d4c-b9b9-942785d9aefb"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="700" y="0" width="100" height="20" uuid="f1451cf3-0c56-48b9-ab49-50c55f447961"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Total Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="869291ba-5caa-4e54-bf2a-153e8b7dea6b"/>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="c9dd6c9d-3650-4b2f-b0bb-c61c2babef4a"/>
+				<textFieldExpression><![CDATA[$F{Item Code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="20" uuid="c719744e-e91b-422f-ba67-c25567763ac2"/>
+				<textFieldExpression><![CDATA[$F{Seller Code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="961116d0-6282-4b83-b8e0-f509dc34ffb9"/>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="5623521a-0be4-4ba1-bbdb-9ee7380e16d5"/>
+				<textFieldExpression><![CDATA[$F{Brand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="100" height="20" uuid="aa1260f2-3af1-4d21-b2bf-8d67f1248cd7"/>
+				<textFieldExpression><![CDATA[$F{Supply Price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="100" height="20" uuid="ea7bc043-338b-439d-bc2a-708787ca955d"/>
+				<textFieldExpression><![CDATA[$F{Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="700" y="0" width="100" height="20" uuid="f0c37c66-ec13-4bbb-819b-f2764798f7d5"/>
+				<textFieldExpression><![CDATA[$F{Total Amount}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="128" splitType="Stretch">
+			<line>
+				<reportElement x="671" y="34" width="125" height="1" uuid="6797a86f-35a9-4550-9f52-946add5b5dc7"/>
+			</line>
+			<staticText>
+				<reportElement x="571" y="22" width="94" height="29" uuid="37b4767e-caca-4cd3-9467-fefc595fb9fb"/>
+				<textElement>
+					<font fontName="Segoe UI" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Amount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="671" y="67" width="125" height="1" uuid="549e8644-d7a7-4126-aed2-ca841ebe28f3"/>
+			</line>
+			<staticText>
+				<reportElement x="571" y="55" width="94" height="29" uuid="ef7a3d36-5358-455f-8a8f-07b595fcd91b"/>
+				<textElement>
+					<font fontName="Segoe UI" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Discount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="671" y="101" width="125" height="1" uuid="98d41406-1da2-4a3c-9016-24c62b70adb1"/>
+			</line>
+			<staticText>
+				<reportElement x="571" y="89" width="94" height="29" uuid="bfb7a088-44ea-4584-b92d-7e2b5a3521ab"/>
+				<textElement>
+					<font fontName="Segoe UI" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sub Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="680" y="18" width="100" height="20" uuid="e75bb317-da6b-41fa-aa1c-951ff6fbed1d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TotalAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="51" width="100" height="20" uuid="68124225-55c2-485f-b5e1-d2c040773881"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="680" y="85" width="100" height="20" uuid="34b072ca-6e45-44b2-8834-bf2615bfd933"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SubTotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

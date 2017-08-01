@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TotalStockItemReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="732aef2e-f12c-42ce-85d6-8c1e3f2de8eb">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="67"/>
+	<property name="ireport.y" value="56"/>
+	<queryString>
+		<![CDATA[select Item_Code,Description,Brand,Size_Of_Item,Qty_On_Hand,Minimum_Qty,Retail_Price
+from Inventory_Item it, Item_Major im
+where it.Product_Code = im.Product_Code;]]>
+	</queryString>
+	<field name="Item_Code" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Brand" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Size_Of_Item" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Qty_On_Hand" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Minimum_Qty" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Retail_Price" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="127" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="58" width="76" height="18" uuid="a059fc6a-0459-4b16-a86e-005410283c2f"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Main Street]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="76" width="76" height="18" uuid="d1a50052-75cd-4f37-bee9-4f2ed95bc187"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Akuressa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="40" width="37" height="18" uuid="a5fcef8b-1375-4ec7-bed9-138007805381"/>
+				<textElement>
+					<font fontName="Segoe UI" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No :- 56 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="251" height="40" uuid="6aea1c56-4621-4a82-b3c2-2c3c396cb335"/>
+				<textElement>
+					<font fontName="Segoe UI" size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fashion Arcade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="94" width="118" height="18" uuid="b3cb23d1-c67e-4b05-bdcd-6c6bee0107cf"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[TP :- 041 2247932]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="455" y="107" width="100" height="20" uuid="801c0f9c-ca0c-4ed4-ae6b-36feae573955"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="148" y="16" width="248" height="40" uuid="2d40d9e8-2661-414c-82d7-c7a58642c552"/>
+				<textElement>
+					<font fontName="Segoe UI" size="30" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Stock Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="79" height="20" uuid="41f37358-c5ce-4fe2-ae85-533e29c27d08"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item_Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="0" width="79" height="20" uuid="8e005e8c-2502-4aeb-ba39-9feaafbc7ee6"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="158" y="0" width="79" height="20" uuid="7c6fbf32-380a-45e3-af1c-3352977c8fad"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="0" width="79" height="20" uuid="6981e3fa-dc7b-4338-a0d4-30094be97809"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Size_Of_Item]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="0" width="79" height="20" uuid="ea564788-8d49-4413-9f9d-660eb81d66ee"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty_On_Hand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="0" width="79" height="20" uuid="15c19375-4877-425c-8422-b6e669b670dd"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Minimum_Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="474" y="0" width="79" height="20" uuid="e8be02ec-dc44-49f9-b368-23acc785454d"/>
+				<textElement>
+					<font fontName="Segoe UI" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Retail_Price]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="79" height="20" uuid="2ef4c4e2-1918-4ca5-a37e-99a0498dc9e0"/>
+				<textFieldExpression><![CDATA[$F{Item_Code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="0" width="79" height="20" uuid="62da93a9-f5be-4075-933f-13b2e9eff2b3"/>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="158" y="0" width="79" height="20" uuid="16ec2d4e-ab02-4b04-824d-59654a08eb0e"/>
+				<textFieldExpression><![CDATA[$F{Brand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="0" width="79" height="20" uuid="48ad9c96-ab2d-471e-a0a1-fc430642503f"/>
+				<textFieldExpression><![CDATA[$F{Size_Of_Item}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="0" width="79" height="20" uuid="10e331fd-9399-4419-9e4f-cae73b5d29f5"/>
+				<textFieldExpression><![CDATA[$F{Qty_On_Hand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="0" width="79" height="20" uuid="955e5eb2-32e5-40f7-9c7a-d1a4c20c77fa"/>
+				<textFieldExpression><![CDATA[$F{Minimum_Qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="474" y="0" width="79" height="20" uuid="b0c4faff-9f0a-4390-8b1e-16265eaa4d89"/>
+				<textFieldExpression><![CDATA[$F{Retail_Price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
